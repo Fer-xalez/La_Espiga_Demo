@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#FBF3E4">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Espiga · Menos pan tirado, mismas ventas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF3E4;--card:#FFFDF8;--ink:#3B2A20;--muted:#725A4A;--line:#E6D5BC;--soft:#F2E4CC;--brand:#A85A1F;--on-brand:#FFF6E8;--green:#4E7A35;--wheat:#B5710C;--butter:#F4BE55;--on-butter:#3B2A20;--rain:#4F78A0;--bad:#B8372B;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#231710;--card:#2F211A;--ink:#F7EBD9;--muted:#CBB59E;--line:#4B382B;--soft:#3A2A21;--brand:#8F4A17;--on-brand:#FFF3E2;--green:#8FBF6A;--wheat:#E7AE45;--butter:#E7AE45;--on-butter:#3B2A20;--rain:#8FB4D6;--bad:#F0806B}}
+:root[data-theme="dark"]{--bg:#231710;--card:#2F211A;--ink:#F7EBD9;--muted:#CBB59E;--line:#4B382B;--soft:#3A2A21;--brand:#8F4A17;--on-brand:#FFF3E2;--green:#8FBF6A;--wheat:#E7AE45;--butter:#E7AE45;--on-butter:#3B2A20;--rain:#8FB4D6;--bad:#F0806B}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 Figtree,system-ui,sans-serif}
+main{max-width:880px;margin:0 auto;padding:28px 20px 56px}
+h1,h2{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+h1{font-size:clamp(38px,10vw,58px)}.ttl span{display:block;font:600 clamp(16px,4vw,21px)/1.3 Figtree,system-ui,sans-serif;color:var(--muted);margin-top:6px}.hl{font-size:clamp(25px,5.6vw,34px);margin:18px 0 0}
+h2{font-size:clamp(23px,4vw,29px);margin-bottom:6px}
+p{margin:0 0 12px;max-width:68ch}
+.sub{color:var(--muted)}
+section{padding-top:44px}header{background:var(--soft);border-radius:28px;padding:24px 18px 22px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:26px;border-top:2px solid var(--ink);padding-top:18px}
+.stats b{display:block;font:400 44px/1 "Young Serif",Georgia,serif}
+.stats span{color:var(--muted);font-size:15px;display:block;margin-top:6px}
+.tool{background:var(--brand);color:var(--on-brand);border-radius:26px;padding:24px 20px;margin-top:14px}
+.tool h2{color:var(--on-brand)}
+.lbl{font-weight:700;font-size:15px;margin:18px 0 8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts button{font:600 16px Figtree,system-ui,sans-serif;padding:11px 14px;min-height:46px;border-radius:12px;border:2px solid color-mix(in srgb,var(--on-brand) 50%,transparent);background:transparent;color:var(--on-brand);cursor:pointer}
+.opts button[aria-pressed="true"]{background:var(--on-brand);color:var(--brand);border-color:var(--on-brand)}
+button:focus-visible,.jump:focus-visible{outline:3px solid var(--butter);outline-offset:2px}.jump:focus-visible{outline-color:var(--ink)}
+.res{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:22px}
+.res div{background:var(--card);color:var(--ink);border-radius:18px;padding:14px 6px;text-align:center;min-width:0}
+.res small{display:block;color:var(--muted);font-size:14px}
+.res strong{display:block;font:400 clamp(40px,11vw,60px)/1.05 "Young Serif",Georgia,serif}
+.res em{font-style:normal;font-size:14px;color:var(--muted);white-space:nowrap}
+.why{background:var(--card);color:var(--ink);border-radius:18px;padding:6px 16px;margin-top:10px}
+.why p{margin:10px 0;font-size:15.5px}
+.copy{margin-top:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.copy button{font:700 16px Figtree,system-ui,sans-serif;padding:12px 16px;min-height:46px;border-radius:12px;border:0;background:var(--butter);color:var(--on-butter);cursor:pointer}
+.msg{font-size:15px;opacity:.95}
+.bars{margin-top:14px}
+.bar{display:grid;grid-template-columns:104px 1fr 62px;gap:10px;align-items:center;margin:9px 0;font-size:15.5px}
+.track{background:var(--soft);border-radius:6px;height:22px;overflow:hidden}
+.fill{height:100%;background:var(--wheat);border-radius:6px}
+.fill.rain{background:var(--rain)}.fill.bad{background:var(--bad)}
+.bar b{text-align:right}
+.tl{margin-top:14px}
+.tr{display:grid;grid-template-columns:78px 1fr;gap:10px;align-items:center;margin:6px 0;font-size:14.5px}
+.tr.wk .nm{font-weight:700}
+.tt{position:relative;height:22px;background:var(--soft);border-radius:6px;overflow:hidden}
+.tt i{position:absolute;left:0;top:0;bottom:0;background:var(--wheat)}
+.tt i.ok{background:var(--green);opacity:.55}
+.tt span{position:absolute;right:8px;top:0;line-height:22px;font-size:13px;font-weight:600}
+.ax{display:grid;grid-template-columns:78px 1fr;gap:10px;font-size:12.5px;color:var(--muted)}
+.ax div{display:flex;justify-content:space-between}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:14px}
+.cmp>div{border-left:4px solid var(--line);padding-left:14px}
+.cmp>div.new{border-color:var(--green)}
+.cmp b{font:400 40px/1.1 "Young Serif",Georgia,serif;display:block}
+ul{padding-left:20px;max-width:68ch}li{margin:6px 0}
+.note{font-size:14.5px;color:var(--muted)}
+@media (max-width:480px){.bar{grid-template-columns:1fr auto;gap:4px 10px}.bar .track{grid-column:1/-1;grid-row:2}.bar b{grid-column:2;grid-row:1}}
+details{background:var(--card);color:var(--ink);border-radius:16px;padding:10px 14px;margin:12px 0;font-size:15px}summary{cursor:pointer;font-weight:600;min-height:28px}details p{margin:8px 0;font-size:15px}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:22px}.kp>div{background:var(--card);border-radius:18px;padding:16px 16px 14px;box-shadow:0 2px 0 var(--line);border-top:5px solid var(--line)}.kp .bad{border-color:var(--bad)}.kp .good{border-color:var(--green)}.kp .warn{border-color:var(--wheat)}
+.kp b{display:block;font:400 clamp(34px,9vw,44px)/1 "Young Serif",Georgia,serif}.kp span{display:block;font-size:15px;margin-top:6px}.kp small{display:block;color:var(--muted);font-size:13px;margin-top:6px}
+.jump{display:inline-block;margin-top:14px;background:var(--brand);color:var(--on-brand);padding:12px 16px;border-radius:12px;font-weight:700;text-decoration:none;min-height:46px}
+.n{display:inline-block;background:var(--butter);color:var(--on-butter);border-radius:50%;width:30px;height:30px;text-align:center;line-height:30px;font:700 16px Figtree,sans-serif;margin-right:8px}
+.wk4{width:100%;border-collapse:collapse;font-size:15px;margin-top:10px}.wk4 td,.wk4 th{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1 class="ttl">🥖 La Espiga <span>Sucursal Centro · 14 días de ventas</span></h1>
+  <h2 class="hl">Se tira 1 de cada 5 piezas, y casi todo es baguette</h2>
+  <p class="sub" style="margin-top:12px">Hornear según el día y el clima baja la merma a cerca de 8 % sin vender menos. El croissant va al revés: se acaba antes de tiempo.</p>
+  <div class="kp" id="kp"></div>
+  <a class="jump" href="#tabla">Rosa: ¿cuánto hornear mañana?</a>
+</header>
+
+<section>
+  <h2>Qué está pasando</h2>
+  <p class="sub">Tres hallazgos, de mayor a menor peso.</p>
+
+  <h2 style="font-size:21px;margin-top:22px"><span class="n">1</span>El baguette se hornea fijo en 120 y vende mucho menos</h2>
+  <div class="bars" id="b-prod"></div>
+  <p style="margin-top:12px" id="t-bag"></p>
+  <details><summary>Cómo se calculó</summary><p>Merma = piezas horneadas − piezas vendidas, por producto, sumadas en 14 días. Porcentaje = merma ÷ horneado. Baguette: 120 × 14 = 1,680 horneadas.</p></details>
+
+  <h2 style="font-size:21px;margin-top:26px"><span class="n">2</span>La lluvia y el fin de semana no se reflejan en lo que se hornea</h2>
+  <div class="bars" id="b-clima"></div>
+  <p style="margin-top:12px" id="t-clima"></p>
+  <p id="t-int"></p>
+
+  <h2 style="font-size:21px;margin-top:26px"><span class="n">3</span>El croissant se agota cuando llegan los clientes</h2>
+  <p>Cada barra es un día. Lo dorado llega hasta la hora en que se agotó; lo verde es un día en que sobró. Las ventas registradas son un piso: la demanda real es mayor.</p>
+  <div class="tl" id="tl"></div>
+  <div class="ax"><span></span><div><span>7:00</span><span>10:00</span><span>13:00</span><span>16:00</span><span>20:00</span></div></div>
+  <p style="margin-top:14px" id="t-cro"></p>
+</section>
+
+<section id="tabla">
+  <div class="tool">
+    <h2>🥐 ¿Cuánto hornear mañana?</h2>
+    <p style="margin:0;opacity:.9">Elige el día y el clima. Son tres números.</p>
+    <div class="lbl">Día</div><div class="opts" id="dias"></div>
+    <div class="lbl">Clima</div><div class="opts" id="clima"></div>
+    <div class="res" id="res"></div>
+    <div class="copy"><button id="cp" type="button">Copiar mensaje para Rosa</button><span class="msg" id="msg" aria-live="polite"></span></div>
+    <details style="margin-top:14px"><summary>¿De dónde sale este número? (para Julián)</summary><div id="why"></div></details>
+  </div>
+</section>
+
+<section>
+  <h2>Qué esperamos lograr</h2>
+  <p>Aplicamos la tabla a los mismos 14 días, con baguette e integral. El croissant se deja igual porque su demanda real no se conoce.</p>
+  <div class="cmp" id="cmp"></div>
+  <p class="note" style="margin-top:14px">Es una prueba sobre los mismos datos con los que se armó la tabla; en la práctica el resultado será algo menos favorable.</p>
+</section>
+
+<section>
+  <h2>Qué anotar cada semana</h2>
+  <p>Andrea anota al cierre, en pocos minutos y por WhatsApp, tres cosas. Con 4 semanas se ajusta la tabla.</p>
+  <table class="wk4"><tr><th>Dato</th><th>Si pasa esto</th><th>Qué hacer</th></tr>
+  <tr><td>Piezas que sobraron</td><td>Más de 5 de croissant</td><td>Bajar 10 el croissant</td></tr>
+  <tr><td>Hora en que se agotó algo</td><td>Antes de las 14:00</td><td>Subir 10 ese producto</td></tr>
+  <tr><td>Merma de la semana</td><td>Sobre ~10 %</td><td>Revisar la tabla con Julián</td></tr></table>
+  <p style="margin-top:14px">Lo que sobre puede rebajarse las últimas dos horas o repartirse al personal con un proceso claro, para que no termine en la basura.</p>
+</section>
+
+<section>
+  <h2>Supuestos</h2>
+  <ul>
+    <li>Las dos semanas son representativas: solo 3 días de lluvia, sin festivos ni quincenas.</li>
+    <li>La demanda de croissant en fin de semana está entre 80 y 120; por eso se sube de forma gradual.</li>
+    <li>Julián conoce el pronóstico de lluvia la noche anterior.</li>
+    <li>Sin precios ni costos: todo se mide en piezas. La meta de ~10 % es una referencia de prueba, no un dato del negocio.</li>
+  </ul>
+</section>
+</main>
+<script>
+// Datos: [semana, día, clima, baguette vendido, croissant vendido, integral vendido, hora en que se agotó el croissant]
+const raw=[[1,"Lunes","Soleado",84,60,34,"18:10"],[1,"Martes","Nublado",88,57,36,null],[1,"Miércoles","Soleado",86,60,35,"17:30"],[1,"Jueves","Lluvia",63,44,26,null],[1,"Viernes","Soleado",95,60,37,"13:20"],[1,"Sábado","Soleado",108,60,29,"10:45"],[1,"Domingo","Nublado",104,60,24,"11:10"],
+[2,"Lunes","Nublado",82,58,35,null],[2,"Martes","Lluvia",66,41,27,null],[2,"Miércoles","Soleado",87,60,36,"18:40"],[2,"Jueves","Soleado",89,60,38,"16:50"],[2,"Viernes","Nublado",93,60,36,"14:05"],[2,"Sábado","Lluvia",79,52,22,null],[2,"Domingo","Soleado",111,60,25,"10:20"]];
+const D=raw.map(r=>({s:r[0],d:r[1],c:r[2],b:r[3],k:r[4],i:r[5],ag:r[6]}));
+const BAKE={b:120,k:60,i:40};
+const DIAS=["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+const wk=d=>d==="Sábado"||d==="Domingo";
+const sum=(a,f)=>a.reduce((x,y)=>x+f(y),0);
+const pct=x=>(x*100).toFixed(1).replace(/\.0$/,"")+"%";
+// Regla de horneado
+function rec(p,d,rain){
+  if(p==="b") return rain?(wk(d)?90:75):(wk(d)?115:(d==="Viernes"?100:95));
+  if(p==="i") return (rain||wk(d))?30:38;
+  return rain?(wk(d)?55:50):(wk(d)?90:(d==="Viernes"?75:70));
+}
+const $=id=>document.getElementById(id);
+const bar=(l,v,t,c)=>`<div class="bar"><span>${l}</span><div class="track"><div class="fill ${c||""}" style="width:${Math.min(100,v*100)}%"></div></div><b>${t}</b></div>`;
+
+// Resumen
+const horn=D.length*220, mermaTot=sum(D,r=>220-r.b-r.k-r.i);
+const mProd={b:sum(D,r=>BAKE.b-r.b),k:sum(D,r=>BAKE.k-r.k),i:sum(D,r=>BAKE.i-r.i)};
+let nb=0,ni=0,nh=0;
+D.forEach(r=>{const rn=r.c==="Lluvia";const rb=rec("b",r.d,rn),ri=rec("i",r.d,rn);nb+=rb-Math.min(r.b,rb);ni+=ri-Math.min(r.i,ri);nh+=rb+ri;});
+const mNew=nb+ni+mProd.k, hNew=nh+D.length*BAKE.k;
+const ag=D.filter(r=>r.ag).length;
+$("kp").innerHTML=`<div class="bad"><b>${pct(mermaTot/horn)}</b><span>de lo horneado se tira</span><small>${mermaTot} de ${horn.toLocaleString("es-MX")} piezas = sobrante ÷ horneado (≈${(mermaTot/220).toFixed(1)} días de horneado)</small><small><strong>Referencia de prueba: ~10 % por semana</strong> (a confirmar con Julián y Rosa)</small></div>
+<div class="bad"><b>${pct(mProd.b/mermaTot)}</b><span>de la merma es baguette</span><small>${mProd.b} de ${mermaTot} piezas tiradas</small></div>
+<div class="warn"><b>${ag} de 14</b><span>días se agotó el croissant</span><small>Ventas perdidas que hoy no se miden</small></div>
+<div class="good"><b>~${pct(mNew/hNew)}</b><span>merma esperada con la tabla</span><small>Baguette e integral, mismas ventas, mismos 14 días</small></div>`;
+$("t-bag").textContent=`Vende cerca de 88 entre semana, 108 en fin de semana y 69 con lluvia, pero siempre se hornean 120. Esa cifra fija explica casi toda la merma.`;
+
+// Herramienta
+const nombres={b:"Baguette",k:"Croissant",i:"Pan integral"};
+let selD=DIAS[(new Date().getDay()+6+1)%7], selR=false;
+function build(){
+  $("dias").innerHTML=DIAS.map(d=>`<button type="button" data-d="${d}" aria-pressed="${d===selD}">${d.slice(0,3)}</button>`).join("");
+  $("clima").innerHTML=[["Sol o nublado",false],["Lluvia",true]].map(([t,v])=>`<button type="button" data-r="${v}" aria-pressed="${v===selR}">${t}</button>`).join("");
+  $("dias").querySelectorAll("button").forEach(b=>b.onclick=()=>{selD=b.dataset.d;build();show()});
+  $("clima").querySelectorAll("button").forEach(b=>b.onclick=()=>{selR=b.dataset.r==="true";build();show()});
+}
+function similar(){return D.filter(r=>wk(r.d)===wk(selD)&&(r.c==="Lluvia")===selR)}
+function show(){
+  const R={b:rec("b",selD,selR),k:rec("k",selD,selR),i:rec("i",selD,selR)};
+  $("res").innerHTML=["b","k","i"].map(p=>`<div><small>${p==="i"?"Integral":nombres[p]}</small><strong>${R[p]}</strong><em>antes ${BAKE[p]}</em></div>`).join("");
+  const S=similar(), n=S.length, ctx=(wk(selD)?"de fin de semana":"entre semana")+(selR?" con lluvia":" con sol o nublado");
+  const line=(p,f)=>{const v=S.map(f);return `${nombres[p]}: se vendieron ${v.join(", ")} (promedio ${Math.round(sum(v,x=>x)/n)}). Hoy se hornean ${BAKE[p]}; la tabla propone ${R[p]}.`};
+  const ags=S.filter(r=>r.ag).map(r=>r.ag);
+  $("why").innerHTML=`<p><b>De dónde sale:</b> en ${n} ${n===1?"día":"días"} ${ctx} del historial${n<3?" (hay pocos datos, tómalo con cuidado)":""}.</p>
+   <p>${line("b",r=>r.b)}</p><p>${line("i",r=>r.i)}</p>
+   <p>${line("k",r=>r.k)} ${ags.length?`Se agotó a las ${ags.join(", ")}, así que la venta real fue mayor. Es un número de prueba: si se agota antes de las 14:00, súbelo 10; si sobran más de 5, bájalo 10.`:"No se agotó, así que aquí el dato es confiable."}</p>`;
+  const tot=R.b+R.k+R.i;
+  $("cp").onclick=async()=>{
+    const m=`Hornear mañana (${selD}, ${selR?"lluvia":"sol/nublado"}): Baguette ${R.b} · Croissant ${R.k} · Pan integral ${R.i}. Total ${tot} piezas.`;
+    try{await navigator.clipboard.writeText(m);$("msg").textContent="Copiado. Pégalo en WhatsApp."}catch(e){$("msg").textContent=m}
+  };
+  $("msg").textContent="";
+}
+build();show();
+
+// Merma por producto y clima
+const tp={b:BAKE.b*D.length,k:BAKE.k*D.length,i:BAKE.i*D.length};
+$("b-prod").innerHTML=["b","k","i"].map(p=>bar(nombres[p],mProd[p]/tp[p],pct(mProd[p]/tp[p])+" ("+mProd[p]+")",p==="k"?"":"bad")).join("");
+const cl=["Soleado","Nublado","Lluvia"].map(c=>{const a=D.filter(r=>r.c===c);return{c,n:a.length,m:sum(a,r=>220-r.b-r.k-r.i)/(a.length*220),v:sum(a,r=>r.b+r.k+r.i)/a.length}});
+$("b-clima").innerHTML=cl.map(x=>bar(x.c+" ("+x.n+" días)",x.m,pct(x.m),x.c==="Lluvia"?"rain":"")).join("");
+$("t-clima").textContent=`Con lluvia se vende cerca de 25% menos en los tres productos (${Math.round(cl[2].v)} piezas al día contra ${Math.round((cl[0].v*cl[0].n+cl[1].v*cl[1].n)/(cl[0].n+cl[1].n))} con sol o nublado), pero se hornea lo mismo. Por eso la merma se dispara.`;
+const iw=D.filter(r=>wk(r.d));
+$("t-int").textContent=`El pan integral también necesita ajuste: el fin de semana vende ${Math.round(sum(iw,r=>r.i)/iw.length)} de 40 y su merma llega a ${pct(sum(iw,r=>BAKE.i-r.i)/(iw.length*BAKE.i))}, contra ${pct(sum(D.filter(r=>!wk(r.d)),r=>BAKE.i-r.i)/(10*BAKE.i))} entre semana.`;
+
+// Línea de tiempo del croissant
+const hh=t=>{const [h,m]=t.split(":").map(Number);return h+m/60};
+$("tl").innerHTML=D.map(r=>{
+  const f=r.ag?Math.max(2,(hh(r.ag)-7)/13*100):100;
+  return `<div class="tr ${wk(r.d)?"wk":""}"><span class="nm">S${r.s} ${r.d.slice(0,3)}</span><div class="tt"><i class="${r.ag?"":"ok"}" style="width:${f}%"></i><span>${r.ag?"se agotó "+r.ag:"sobraron "+(60-r.k)}</span></div></div>`}).join("");
+const fa=D.filter(r=>wk(r.d)&&r.ag);
+$("t-cro").textContent=`Se agotó ${D.filter(r=>r.ag).length} de 14 días. Los fines de semana soleados o nublados ocurrió entre las 10:20 y las 11:10, justo cuando Andrea ve que los clientes se van sin nada. Con lluvia no se agotó. Por eso la tabla prueba 90 el fin de semana y 70 entre semana, y baja a 50 con lluvia.`;
+
+// Antes y después
+$("cmp").innerHTML=`<div><small>Hoy</small><b>${pct(mermaTot/horn)}</b><p>${mermaTot} piezas tiradas de ${horn.toLocaleString("es-MX")}. Baguette ${mProd.b}, integral ${mProd.i}, croissant ${mProd.k}.</p></div>
+<div class="new"><small>Con la tabla</small><b>~${pct(mNew/hNew)}</b><p>${mNew} piezas tiradas de ${hNew.toLocaleString("es-MX")}. Baguette ${nb}, integral ${ni}, croissant ${mProd.k}. Las ventas de baguette e integral no cambian.</p></div>`;
+</script>
+</body>
+</html>
